@@ -15,6 +15,7 @@ fileInp.onchange = evt => {
     reader.onload = function(e) {
       JSONdata = e.target.result
       mergeData = JSON.parse(JSONdata)
+      console.log(JSON.stringify(mergeData))
       navig = new Navig(mergeData)
       mapContrl.setNavig(navig)
       setMapOptions(mergeData["floors"])
